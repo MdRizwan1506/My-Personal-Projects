@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import { colorCodes } from '../constant/color';
+import { devices } from '../constant/devices';
 
-const { BLUE_1, GREY } = colorCodes
+const { BLUE_1, GREY, ALICEBLUE } = colorCodes
 
 const Container = styled.div`
     padding: 0px 20px;
@@ -34,7 +35,7 @@ const Image = styled.div`
             cursor: pointer;
             box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
         }
-        @media(max-width: 870px){
+        @media ${devices.tablet} {
             margin-top: 20px;
             text-align: center !important;
         }
@@ -52,7 +53,7 @@ const Information = styled.div`
 `;
 
 const Title = styled.div`
-    color: #173b6c;
+    color: ${ALICEBLUE};
     font-weight: 700;
     font-size: 26px;
     padding-bottom: 20px;
@@ -138,13 +139,13 @@ const About = () => {
                         <FirstSection>
                             <div className="align-center"><i className="fal fa-angle-right"></i><span>Birthday : </span> 01 / July / 1998</div>
                             <div className="align-center"><i className="fal fa-angle-right"></i><span>Website : </span>  My-Personal-Project </div>
-                            <div className="align-center"><i className="fal fa-angle-right"></i><span>Phone : </span> +91 8383944926</div>
+                            <div className="align-center"><i className="fal fa-angle-right"></i><span>Phone : </span> +91 888-888-8888</div>
                             <div className="align-center"><i className="fal fa-angle-right"></i><span>City : </span> Haryana , India</div>
                         </FirstSection>
                         <SecondSection>
                             <div className="align-center"><i className="fal fa-angle-right"></i><span>Age : </span> 21 </div>
                             <div className="align-center"><i className="fal fa-angle-right"></i><span>Degree : </span> Computer Science (CS)</div>
-                            <div className="align-center"><i className="fal fa-angle-right"></i><span>Email : </span>mdrizwan@gmail.com</div>
+                            <div className="align-center"><i className="fal fa-angle-right"></i><span>Email : </span>exapmle@gmail.com</div>
                             <div className="align-center"><i className="fal fa-angle-right"></i><span>Freelance : </span> Available</div>
                         </SecondSection>
                     </Details>

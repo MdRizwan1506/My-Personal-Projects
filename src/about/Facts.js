@@ -18,6 +18,8 @@ const Text = styled.div`
 
 
 const FactsList = styled.div`
+    width: 100%;
+    box-sizing: border-box;
     margin-top: 50px;
     display: flex;
     i {
@@ -31,21 +33,25 @@ const FactsList = styled.div`
 const Clients = styled.div`
     display: flex;
     display: flex;
+    min-width: 22%;
     padding: 30px 15px;
 `;
 const Projects = styled.div`
     display: flex;
     display: flex;
+    min-width: 22%;
     padding: 30px 15px;
 `;
 const HardWorkers = styled.div`
     display: flex;
     display: flex;
+    min-width: 22%;
     padding: 30px 15px;
 `;
 const HoursOfSupport = styled.div`
     display: flex;
     display: flex;
+    min-width: 22%;
     padding: 30px 15px;
 `;
 const Icon = styled.div`
@@ -109,8 +115,8 @@ const Facts = () => {
                     <SubHeading>
                         <Data><CountUp end={521} duration={5} /></Data>
                         <div>
-                            <Heading>Happy Clients</Heading>
-                            <SubTitle>consequuntur  quae</SubTitle>
+                            <Heading>Projects adipisci</Heading>
+                            <SubTitle>atque cum quia aut</SubTitle>
                         </div>
                     </SubHeading>
                 </Projects>
@@ -119,8 +125,8 @@ const Facts = () => {
                     <SubHeading>
                         <Data><CountUp end={1463} duration={5} /></Data>
                         <div>
-                            <Heading>Happy Clients</Heading>
-                            <SubTitle>consequuntur quae</SubTitle>
+                            <Heading>Hours Of Support</Heading>
+                            <SubTitle>aut commodi quaerat</SubTitle>
                         </div>
                     </SubHeading>
                 </HardWorkers>
@@ -129,8 +135,8 @@ const Facts = () => {
                     <SubHeading>
                         <Data><CountUp end={15} duration={5} /></Data>
                         <div>
-                            <Heading>Happy Clients</Heading>
-                            <SubTitle>consequuntur quae</SubTitle>
+                            <Heading>Hard Workers</Heading>
+                            <SubTitle>rerum asperiores dolor</SubTitle>
                         </div>
                     </SubHeading>
                 </HoursOfSupport>

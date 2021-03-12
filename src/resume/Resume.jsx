@@ -1,5 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
+import { colorCodes } from '../constant/color';
+
+const { ALICEBLUE, WHITE, GREY } = colorCodes
 
 const Container = styled.div`
     padding: 0px 20px;
@@ -8,7 +11,7 @@ const Container = styled.div`
 `;
 
 const Title = styled.div`
-    color: #173b6c;
+    color: ${ALICEBLUE};
     font-size: 32px;
     padding-top: 20px;
     font-weight: bold;
@@ -16,6 +19,7 @@ const Title = styled.div`
     padding-bottom: 20px;
     @media (max-width: 400px) {
         text-align: center;
+        padding-top: 60px;
         padding-bottom: unset;
     }
 `;
@@ -63,7 +67,7 @@ const TitleTwo = styled.div`
     font-size: 26px;
     font-weight: 700;
     margin: 30px 0px;
-    color: #050d18;
+    color: ${GREY};
     @media (max-width: 400px) {
         text-align: center;
         padding-bottom: unset;
@@ -72,29 +76,28 @@ const TitleTwo = styled.div`
 
 
 const SubTitle = styled.div`
-    color: #272829;
     font-style: italic;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #212529;
     text-align: left;
-    background-color: #fff;
+    background-color: ${WHITE};
     font-family: "Open Sans", sans-serif;
 `;
 
 const MyInformation = styled.div`
-    margin-bottom: ${props => props.paddingTop ? "20px" : "0"};
     ul {
         padding-left: 20px;
         line-height: 35px;
     }
+    margin-bottom: ${props => props.paddingTop ? "20px" : "0"};
 `;
 
 const ExperienceBody = styled.div`
+    position: relative;
     padding: 0 20px 0px 20px;
-    border-left: 2px solid #1f5297;
-    position: relative;`;
+    border-left: 2px solid ${ALICEBLUE};
+`;
 
 
 const YearDiv = styled.div`
@@ -104,6 +107,7 @@ const YearDiv = styled.div`
     display: inline-block;
     font-weight: 600;
     margin: 15px 0px;
+    // color: ${ALICEBLUE};
 `;
 
 const Place = styled.div`
@@ -113,7 +117,6 @@ const Place = styled.div`
     font-style: italic;
     color: #212529;
     text-align: left;
-    background-color: #fff;
 `;
 
 const Education = styled.div``;
@@ -128,11 +131,11 @@ const CheckBoxDiv = styled.div`
   width: 20px;
   height: 20px;
   left: -11px;
-  background: #fff;
   border-radius: 50%;
   position: absolute;
-  border: 2px solid #1f5297;
+  background: ${WHITE};
   box-sizing: border-box;
+  border: 2px solid ${ALICEBLUE};
 `;
 
 
@@ -149,13 +152,13 @@ const MyResume = () => {
                         <CheckBoxDiv />
                         <Heading>MD RIZWAN</Heading>
                         <SubTitle>
-                            Innovative and deadline-driven React & Redux developer with 1+ years of experience in developing user-Interface .
+                            Innovative and deadline-driven React & Redux developer with one year of experience in developing user-Interface .
                         </SubTitle>
                         <MyInformation>
                             <ul>
                                 <li>H.No 23 Block No-A JSL Colony, Hisar</li>
-                                <li>+91 8383944926</li>
-                                <li>mdrizwan@gmail.com</li>
+                                <li>+91 888-888-8888</li>
+                                <li>exapmle@gmail.com</li>
                             </ul>
                         </MyInformation>
                     </SumryBody>
@@ -206,7 +209,7 @@ const MyResume = () => {
                                 <li><b>Company : </b> Daffodil Software LTD(Metroplois)</li>
                                 <li><b>Project Name : </b> My-Personal-Project</li>
                                 <li><b>Description : </b>This website based on my personal information</li>
-                                <li><b>Language : </b>HTML, CSS, Rect and Javasript (JS)</li>
+                                <li><b>Language : </b>HTML, CSS, BootStrap, and Javasript (JS)</li>
                             </ul>
                         </MyInformation>
                         <div className="pt-30">
@@ -225,9 +228,7 @@ const MyResume = () => {
                         </div>
                         <div className="pt-30">
                             <CheckBoxDiv />
-                            <Heading>INTERNSHIP </Heading>
-                            <YearDiv>2020- PRESENT</YearDiv>
-                            <Place><b>Company Name : </b> Repozitory Technology <br />Sector - 14 Hisar, Haryana</Place>
+                            <Heading>EXPERIENCE </Heading>
                             <MyInformation paddingTop={true}>
                                 <ul>
                                     <li>Frontend Developer. (FE)</li>

@@ -88,10 +88,10 @@ const Skills = () => {
                     </DesignList>
                     <FragmentDiv>
                         <span>PYTHON</span>
-                        <span>30%</span>
+                        <span>20%</span>
                     </FragmentDiv>
                     <DesignList className="skills-container">
-                        <LanguageSkills skills={30} ></LanguageSkills>
+                        <LanguageSkills skills={20} ></LanguageSkills>
                     </DesignList>
                     <FragmentDiv>
                         <span>CSS</span>
@@ -118,10 +118,10 @@ const Skills = () => {
                     </DesignList>
                     <FragmentDiv>
                         <span>PHP</span>
-                        <span>35%</span>
+                        <span>15%</span>
                     </FragmentDiv>
                     <DesignList className="skills-container">
-                        <LanguageSkills skills={35}></LanguageSkills>
+                        <LanguageSkills skills={15}></LanguageSkills>
                     </DesignList>
                 </Language>
             </SkillsDiv>
