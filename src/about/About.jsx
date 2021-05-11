@@ -1,13 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
-import { colorCodes } from '../constant/color';
-import { devices } from '../constant/devices';
+import { colorCodes } from '../constant/color'
+import { devices } from '../constant/devices'
 
 const { BLUE_1, GREY, ALICEBLUE } = colorCodes
 
 const Container = styled.div`
     padding: 0px 20px;
-`;
+`
 
 const Text = styled.div`
     color: ${GREY};
@@ -16,7 +16,7 @@ const Text = styled.div`
     line-height: 26px;
     text-align: justify;
     font-family: "Open Sans", sans-serif;
-`;
+`
 
 const MyDetails = styled.div`
     display: flex;
@@ -24,7 +24,7 @@ const MyDetails = styled.div`
     @media(max-width: 870px){
         display: unset;
     }
-`;
+`
 
 const Image = styled.div`
     img {
@@ -43,14 +43,14 @@ const Image = styled.div`
     @media(max-width: 870px){
         text-align: center;
     }
-`;
+`
 
 const Information = styled.div`
     padding: 0px 30px;
     @media(max-width:870px) {
         padding: unset;
     }
-`;
+`
 
 const Title = styled.div`
     color: ${ALICEBLUE};
@@ -60,7 +60,7 @@ const Title = styled.div`
     @media(max-width:870px) {
         padding-top: 20px;
     }
-`;
+`
 
 const Description = styled.div`
     font-size: 1rem;
@@ -68,7 +68,7 @@ const Description = styled.div`
     line-height: 1.5;
     color: ${GREY};
     font-family: "Open Sans", sans-serif;
-`;
+`
 
 const Details = styled.div`
     display: flex;
@@ -92,7 +92,7 @@ const Details = styled.div`
         flex-wrap: wrap;
         display: unset;
     }
-`;
+`
 
 const Paragraph = styled.div`
     font-size: 1rem;
@@ -105,21 +105,20 @@ const Paragraph = styled.div`
     @media(max-width: 768px){
         padding: 20px 0px;
     }
-`;
+`
 
 const FirstSection = styled.div`
     min-width: 300px;
     line-height: 40px;
-`;
+`
 
 const SecondSection = styled.div`
     min-width: 300px;
     line-height: 40px;
-`;
-
+`
 
 const About = () => {
-    return (
+  return (
         <Container>
             <div className="title">About</div>
             <Text>
@@ -128,7 +127,7 @@ const About = () => {
             </Text>
             <MyDetails>
                 <Image>
-                    <img src={require(`../assets/card-images/rizwan4.jpg`)} alt="my-about" />
+                    <img src={require('../assets/card-images/rizwan4.jpg')} alt="my-about" />
                 </Image>
                 <Information>
                     <Title>UI/UX Designer & Web Developer.</Title>
@@ -155,7 +154,7 @@ const About = () => {
                 </Information>
             </MyDetails>
         </Container>
-    )
+  )
 }
 
 export default About

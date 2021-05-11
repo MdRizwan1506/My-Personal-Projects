@@ -2,7 +2,6 @@
 
 // const BASE_URL = 'http://localhost:5000/',
 
-
 // export async function axiosRequest(method, url, data = null) {
 //   let URL = `${BASE_URL}`;
 

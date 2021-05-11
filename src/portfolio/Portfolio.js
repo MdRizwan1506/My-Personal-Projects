@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { portfolioList } from '../constant/DummyData';
-import { colorCodes } from '../constant/color';
+import { portfolioList } from '../constant/DummyData'
+import { colorCodes } from '../constant/color'
 
 const { GREY } = colorCodes
 
@@ -27,14 +27,14 @@ const Container = styled.div`
             cursor: pointer;
         }
     }
-`;
+`
 
 const Text = styled.div`
     line-height: 26px;
     text-align: justify;
     padding-bottom: 30px;
     color: ${GREY};
-`;
+`
 
 const Data = styled.div`
     width: 33%;
@@ -50,7 +50,7 @@ const Data = styled.div`
         width: 100%;
         padding-right: unset;
     }
-`;
+`
 
 const Image = styled.img`
     width: 100%;
@@ -69,16 +69,15 @@ const Image = styled.img`
         font-weight: 600;
         font-family: serif;
     }
-`;
+`
 
 const PortfolioImage = styled.div`
     display: flex;
     flex-wrap: wrap;
-`;
+`
 
 const MyPortfolio = () => {
-
-    return (
+  return (
         <Container>
             <div className="title">Portfolio</div>
             <Text>
@@ -86,7 +85,7 @@ const MyPortfolio = () => {
             </Text>
             <PortfolioImage>
                 {portfolioList.map((obj, index) => {
-                    return (
+                  return (
                         <Data key={index}>
                             <Image src={obj.img} alt="Prtfolio image" />
                             <div className="on-hovering">
@@ -94,11 +93,11 @@ const MyPortfolio = () => {
                                 <div>{obj.post}</div>
                             </div>
                         </Data>
-                    )
+                  )
                 })}
             </PortfolioImage>
         </Container>
-    )
+  )
 }
 
 export default MyPortfolio

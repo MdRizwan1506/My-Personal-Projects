@@ -1,3 +1,5 @@
+@import '../.././assets/scss/colors.scss';
+
 $spaceamounts: (
   0,
   1,
@@ -144,7 +146,7 @@ input.disable-autocomplete::-webkit-contacts-auto-fill-button {
   width: 100%;
   height: 50px;
   outline: none;
-  color: #fff;
+  color: $white;
   font-size: 18px;
   transition: 0.4s;
   padding: 10px 24px;
@@ -153,7 +155,7 @@ input.disable-autocomplete::-webkit-contacts-auto-fill-button {
 }
 
 .title {
-  color: #173b6c;
+  color: $aliceblue;
   font-size: 32px;
   padding-top: 30px;
   font-weight: bold;
@@ -161,6 +163,7 @@ input.disable-autocomplete::-webkit-contacts-auto-fill-button {
   padding-bottom: 20px;
   @media (max-width: 400px) {
       text-align: center;
+      padding-top: 60px;
       padding-bottom: unset;
   }
 }

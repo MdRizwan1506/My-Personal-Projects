@@ -1,8 +1,9 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react'
 import { withRouter } from 'react-router-dom'
 import styled from 'styled-components'
-import { colorCodes } from './constant/color';
-import { devices } from './constant/devices';
+import { colorCodes } from './constant/color'
+import { devices } from './constant/devices'
 
 const { BLUE_1 } = colorCodes
 
@@ -12,7 +13,7 @@ const Container = styled.div`
     text-align: center;
     margin: 0px 30px;
     flex-direction: column;
-`;
+`
 const GoToHomeButton = styled.button`
   width: 50%;
   max-width: 350px;
@@ -23,9 +24,9 @@ const GoToHomeButton = styled.button`
   @media ${devices.mobile} {
       width: 90%;
   }
-`;
+`
 
-const NotFound = ({history}) => (
+const NotFound = (history) => (
     <Container className="center-flex container">
         <div className="heading3">On no! The page you're looking for couldn't be found</div>
         <GoToHomeButton className="mt-30 common-button" onClick={() => history.push('/')}>TAKE ME HOME</GoToHomeButton>

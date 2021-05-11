@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
-import { CarsouelData } from '../constant/DummyData';
+import { CarsouelData } from '../constant/DummyData'
 import './Testimonials.css'
-import { colorCodes } from '../constant/color';
-import { devices } from '../constant/devices';
+import { colorCodes } from '../constant/color'
+import { devices } from '../constant/devices'
 
-const { WHITE, GREY } = colorCodes
+const { WHITE, GREY, ALICEBLUE } = colorCodes
 
 const Container = styled.div`
     background: #f5f8fd;
@@ -26,17 +26,17 @@ const Container = styled.div`
         transform: rotate(135deg);
         z-index: 99;
       }
-`;
+`
 
 const Text = styled.div`
     text-align: justify;
     line-height: 26px;
     padding-bottom: 50px;
-`;
+`
 
 const MyExportTeam = styled.div`
     flex-wrap: wrap;
-`;
+`
 
 const Description = styled.div`
     min-height: 200px;
@@ -52,7 +52,7 @@ const Description = styled.div`
         min-height: 150px;
     }
     box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-`;
+`
 
 const Img = styled.img`
     width: 120px;
@@ -74,19 +74,19 @@ const Img = styled.img`
         height: 120px;
     }
 
-`;
+`
 
 const Name = styled.div`
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     margin: 10px 0 5px 0;
-    color: ${GREY};
-`;
+    color: ${ALICEBLUE};
+`
 
 const Position = styled.div`
     font-size: 14px;
     color: ${GREY};
-`;
+`
 
 const DataList = styled.div`
     width: 30%;
@@ -100,10 +100,10 @@ const DataList = styled.div`
     @media ${devices.mobile} {
         width: 100%;
     }
-`;
+`
 
 const Testimonials = () => {
-    return (
+  return (
         <Container>
             <div className="title">Testimonials</div>
             <Text>
@@ -111,23 +111,23 @@ const Testimonials = () => {
                 </Text>
             <MyExportTeam className="center-flex">
                 {CarsouelData.map((obj, index) => {
-                    return (
+                  return (
                         <DataList key={index}>
                             <Description>
-                                <img className="pr-8" src={require(`../assets/quote/quote-alt-left.svg`)} alt="double-quote" />
+                                <img className="pr-8" src={require('../assets/quote/quote-alt-left.svg')} alt="double-quote" />
                                 {obj.text}
-                                <img className="pl-8" src={require(`../assets/quote/quote-alt-right.svg`)} alt="double-quotes" />
+                                <img className="pl-8" src={require('../assets/quote/quote-alt-right.svg')} alt="double-quotes" />
                             </Description>
                             <div className="review_triangle"></div>
                             <Img src={obj.image} alt="services-image" />
                             <Name>{obj.name}</Name>
                             <Position>{obj.post}</Position>
                         </DataList>
-                    )
+                  )
                 })}
             </MyExportTeam>
         </Container>
-    )
+  )
 }
 
 export default Testimonials

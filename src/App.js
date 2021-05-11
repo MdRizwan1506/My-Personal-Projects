@@ -57,13 +57,9 @@ export class App extends Component {
         }
     }
 
-    componentDidMount = () => {
-        document.addEventListener('click', this.handleClickOutside)
-    }
+    componentDidMount = () => document.addEventListener('click', this.handleClickOutside)
 
-    componentWillUnmount() {
-        document.removeEventListener('click', this.handleClickOutside)
-    }
+    componentWillUnmount = () => document.removeEventListener('click', this.handleClickOutside)
 
     handleClickOutside = event => {
         const elemWrapper = this.winWrapper
@@ -71,6 +67,8 @@ export class App extends Component {
             this.setState({ showMenuNavigation: false })
         }
     }
+
+    ShowMenuBar = () => this.setState({ showMenuNavigation: !this.state.showMenuNavigation })
 
     render() {
         const { showMenuNavigation } = this.state
@@ -81,8 +79,8 @@ export class App extends Component {
                         <Sidebar />
                     </ShowSideBarOrNot>
                     <MenuIcon ref={this.winWrapper}
-                        onClick={() => this.setState({ showMenuNavigation: !showMenuNavigation })}>
-                        <i className="fas fa-bars"></i>
+                        onClick={() => this.ShowMenuBar()}>
+                        {!showMenuNavigation ? <i className="fas fa-bars"></i> : <i className="fal fa-times"></i>}
                     </MenuIcon>
                     <Switch>
                         <Route exact path="/"><SideMenu /></Route>

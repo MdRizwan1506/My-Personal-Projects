@@ -1,21 +1,20 @@
 import React from 'react'
 import styled from 'styled-components'
-import CountUp from "react-countup";
-import { colorCodes } from '../constant/color';
+import CountUp from 'react-countup'
+import { colorCodes } from '../constant/color'
 
 const { BLUE_1, GREY } = colorCodes
 
 const Container = styled.div`
     padding: 60px 20px;
     box-sizing: border-box;
-`;
+`
 
 const Text = styled.div`
     color: ${GREY};
     line-height: 26px;
     text-align: justify;
-`;
-
+`
 
 const FactsList = styled.div`
     width: 100%;
@@ -29,35 +28,35 @@ const FactsList = styled.div`
         flex-wrap: wrap;
         display: unset;
     }
-`;
+`
 const Clients = styled.div`
     display: flex;
     display: flex;
     min-width: 22%;
     padding: 30px 15px;
-`;
+`
 const Projects = styled.div`
     display: flex;
     display: flex;
     min-width: 22%;
     padding: 30px 15px;
-`;
+`
 const HardWorkers = styled.div`
     display: flex;
     display: flex;
     min-width: 22%;
     padding: 30px 15px;
-`;
+`
 const HoursOfSupport = styled.div`
     display: flex;
     display: flex;
     min-width: 22%;
     padding: 30px 15px;
-`;
+`
 const Icon = styled.div`
     font-size: 50px;
     height: 55px;
-`;
+`
 
 const Data = styled.div`
     color: ${GREY};
@@ -66,7 +65,7 @@ const Data = styled.div`
     font-weight: 700;
     line-height: 40px;
     padding-left: 20px;
-`;
+`
 
 const Heading = styled.div`
     color: #122f57;
@@ -76,24 +75,24 @@ const Heading = styled.div`
     font-weight: 900;
     line-height: 26px;
     font-family: "Raleway", sans-serif;
-`;
+`
 
 const SubHeading = styled.div`
     min-width: 160px;
     @media(max-width:768px) {
         min-width: unset;
     }
-`;
+`
 
 const SubTitle = styled.div`
     padding-left: 20px;
     font-family: "Raleway", sans-serif;
     font-size: 14px;
     color: #122f57;
-`;
+`
 
 const Facts = () => {
-    return (
+  return (
         <Container>
             <div className="title">Facts</div>
             <Text>
@@ -142,7 +141,7 @@ const Facts = () => {
                 </HoursOfSupport>
             </FactsList>
         </Container>
-    )
+  )
 }
 
 export default Facts

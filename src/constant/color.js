@@ -8,4 +8,5 @@ export const colorCodes = {
     RED: color.red,
     BLUE_1: color.blue1,
     LIGHT_BLACK: color.lightblack,
+    ALICEBLUE: color.aliceblue,
 }

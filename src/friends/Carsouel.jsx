@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react'
 import styled from 'styled-components'
 import Slider from 'react-slick'
@@ -12,27 +13,27 @@ const Container = styled.div`
   .slick-dots {
     font--size: 20px;
   } 
-`;
+`
 
 const AngleLeftArrow = styled.i`
   display: ${(props) =>
-    props.availability === "slick-arrow slick-prev slick-disabled"
-      ? "none !important"
-      : ""};
-`;
+    props.availability === 'slick-arrow slick-prev slick-disabled'
+      ? 'none !important'
+      : ''};
+`
 
 const AngleRightArrow = styled.i`
   display: ${(props) =>
-    props.availability === "slick-arrow slick-next slick-disabled"
-      ? "none !important"
-      : ""};
-`;
+    props.availability === 'slick-arrow slick-next slick-disabled'
+      ? 'none !important'
+      : ''};
+`
 
 const FriendsList = styled.div`
     margin-top: 50px;
     padding: 0px 20px;
     position: relative;
-`;
+`
 
 const ListData = styled.div`
     width: 300px;
@@ -65,7 +66,7 @@ const ListData = styled.div`
     }
     margin: 20px 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-`;
+`
 
 const FriendsImage = styled.div`
   display: flex;
@@ -73,7 +74,7 @@ const FriendsImage = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   box-sizing: border-box;
-`;
+`
 
 const Text = styled.div`
   height: 190px;
@@ -91,7 +92,7 @@ const Text = styled.div`
   @media (max-width: 400px) {
     padding: 90px 20px 10px 20px;
   }
-`;
+`
 
 const Name = styled.div`
   width: 90%;
@@ -107,35 +108,35 @@ const Name = styled.div`
   :hover {
     background: ${BLUE_1};
   }
-`;
+`
 
 const Contant = styled.div`
   color: ${GREY};
   margin-top: 70px;
-`;
+`
 
-function NextArrow(props) {
-  const { className, onClick } = props;
+function NextArrow (props) {
+  const { className, onClick } = props
   return (
     <AngleRightArrow
-      className={"fa fa-angle-right fa-1x content-prev-arrow"}
+      className={'fa fa-angle-right fa-1x content-prev-arrow'}
       onClick={onClick}
       aria-hidden="true"
       availability={className}
     ></AngleRightArrow>
-  );
+  )
 }
 
-function PrevArrow(props) {
-  const { className, onClick } = props;
+function PrevArrow (props) {
+  const { className, onClick } = props
   return (
     <AngleLeftArrow
-      className={"fa fa-angle-left fa-1x content-next-arrow"}
+      className={'fa fa-angle-left fa-1x content-next-arrow'}
       onClick={onClick}
       aria-hidden="true"
       availability={className}
     ></AngleLeftArrow>
-  );
+  )
 }
 
 const Carsouel = () => {
@@ -147,8 +148,8 @@ const Carsouel = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
-  };
+    prevArrow: <PrevArrow />
+  }
   return (
 
     <Container>
@@ -158,7 +159,7 @@ const Carsouel = () => {
             <div className="crausoel_container" key={i}>
               <img src={value.img} className="crausoel_image" alt="img-jpg" />
             </div>
-          );
+          )
         })}
       </Slider>
       <FriendsList>

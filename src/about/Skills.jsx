@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { colorCodes } from '../constant/color';
+import { colorCodes } from '../constant/color'
 
 const { BLUE_1, GREY } = colorCodes
 
@@ -8,13 +8,13 @@ const Container = styled.div`
     background: #f5f8fd;
     box-sizing: border-box;
     padding: 10px 20px 40px 20px;
-`;
+`
 
 const Text = styled.div`
     color: ${GREY};
     line-height: 26px;
     padding-bottom: 40px;
-`;
+`
 
 const SkillsDiv = styled.div`
     display: flex;
@@ -32,7 +32,7 @@ span {
 @media(max-width:768px){
     display: unset;
 }
-`;
+`
 
 const Design = styled.div`
     width: 50%;
@@ -42,7 +42,7 @@ const Design = styled.div`
         width: 100%;
         padding-right: unset;
     }
-`;
+`
 
 const Language = styled.div`
     width: 50%;
@@ -52,26 +52,26 @@ const Language = styled.div`
         width: 100%;
         padding-left: unset;
     }
-`;
+`
 
 const LanguageSkills = styled.div`
     width: ${props => props.skills && props.skills}%;
     height: 10px;
     background-color: ${BLUE_1};
-`;
+`
 
 const DesignList = styled.div`
     display: flex;
     justify-content: space-between;
-`;
+`
 
 const FragmentDiv = styled.div`
     display: flex;
     justify-content: space-between;
-`;
+`
 
 const Skills = () => {
-    return (
+  return (
         <Container>
             <div className="title">Skills</div>
             <Text>
@@ -126,7 +126,7 @@ const Skills = () => {
                 </Language>
             </SkillsDiv>
         </Container >
-    )
+  )
 }
 
 export default Skills

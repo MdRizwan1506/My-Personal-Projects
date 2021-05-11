@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { colorCodes } from '../constant/color';
+import { colorCodes } from '../constant/color'
 
 const { ALICEBLUE, WHITE, GREY } = colorCodes
 
@@ -8,7 +8,7 @@ const Container = styled.div`
     padding: 0px 20px;
     margin-bottom: 50px;
     font-family: "Open Sans",sans-serif;
-`;
+`
 
 const Title = styled.div`
     color: ${ALICEBLUE};
@@ -22,9 +22,9 @@ const Title = styled.div`
         padding-top: 60px;
         padding-bottom: unset;
     }
-`;
+`
 
-const HeaderDiv = styled.div``;
+const HeaderDiv = styled.div``
 
 const InnerBody = styled.div`
     width: 100%;
@@ -32,26 +32,26 @@ const InnerBody = styled.div`
     @media (max-width: 768px) {
         display: unset;
     }
-`;
+`
 
 const SumaryDiv = styled.div`
     width: 50%;
     @media (max-width: 900px) {
         width: 100%;
     }
-`;
+`
 const ExperienceDiv = styled.div`
     width: 50%;
     @media (max-width: 900px) {
         width: 100%;
     }
-`;
+`
 
 const SumryBody = styled.div`
     padding: 0 20px 0px 20px;
     border-left: 2px solid #1f5297;
     position: relative;
-`;
+`
 
 const Heading = styled.div`
     color: #050d18;
@@ -61,7 +61,7 @@ const Heading = styled.div`
     margin-bottom: 10px;
     text-transform: uppercase;
     font-family: "Poppins", sans-serif;
-`;
+`
 
 const TitleTwo = styled.div`
     font-size: 26px;
@@ -72,8 +72,7 @@ const TitleTwo = styled.div`
         text-align: center;
         padding-bottom: unset;
     }
-`;
-
+`
 
 const SubTitle = styled.div`
     font-style: italic;
@@ -83,22 +82,21 @@ const SubTitle = styled.div`
     text-align: left;
     background-color: ${WHITE};
     font-family: "Open Sans", sans-serif;
-`;
+`
 
 const MyInformation = styled.div`
     ul {
         padding-left: 20px;
         line-height: 35px;
     }
-    margin-bottom: ${props => props.paddingTop ? "20px" : "0"};
-`;
+    margin-bottom: ${props => props.paddingTop ? '20px' : '0'};
+`
 
 const ExperienceBody = styled.div`
     position: relative;
     padding: 0 20px 0px 20px;
     border-left: 2px solid ${ALICEBLUE};
-`;
-
+`
 
 const YearDiv = styled.div`
     font-size: 16px;
@@ -108,7 +106,7 @@ const YearDiv = styled.div`
     font-weight: 600;
     margin: 15px 0px;
     // color: ${ALICEBLUE};
-`;
+`
 
 const Place = styled.div`
     font-size: 1rem;
@@ -117,15 +115,15 @@ const Place = styled.div`
     font-style: italic;
     color: #212529;
     text-align: left;
-`;
+`
 
-const Education = styled.div``;
+const Education = styled.div``
 
 const Description = styled.div`
     line-height: 26px;
     padding-top: 20px;
-    padding-bottom: ${props => props.paddingBottom ? "40px" : "0px"};
-`;
+    padding-bottom: ${props => props.paddingBottom ? '40px' : '0px'};
+`
 
 const CheckBoxDiv = styled.div`
   width: 20px;
@@ -136,11 +134,10 @@ const CheckBoxDiv = styled.div`
   background: ${WHITE};
   box-sizing: border-box;
   border: 2px solid ${ALICEBLUE};
-`;
-
+`
 
 const MyResume = () => {
-    return (
+  return (
         <Container>
             <HeaderDiv>
                 <Title>Resume</Title>
@@ -240,7 +237,7 @@ const MyResume = () => {
                 </ExperienceDiv>
             </InnerBody>
         </Container>
-    )
+  )
 }
 
 export default MyResume

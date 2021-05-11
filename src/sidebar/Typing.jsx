@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import { colorCodes } from '../constant/color';
+import axios from 'axios';
 
 const { BLUE_1 } = colorCodes
 
@@ -22,7 +23,17 @@ class Typing extends Component {
     }
   }
 
+  getUser = async () => {
+    try {
+      const response = await axios.get('http://localhost:5001/api/quize');
+      console.log(response.data.questions);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
   componentDidMount() {
+    this.getUser()
     window.addEventListener('load', this.type())
   }
 
